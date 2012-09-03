@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Miriam's Page - Hexadecimal to Color</title>
+		
+		<script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script>
+		
+		<style type="text/css">
+			div#color {
+				border: 1px solid #666; 
+				width: 40px; 
+				height: 40px;
+				float: left;
+			}
+			
+			form#hextocolor {
+				display: block;
+				float: left;
+				width: 150px;
+			}
+			
+			input#hexcode {
+				width: 80px;
+				text-align: right;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$("form#hextocolor").bind("submit", function rodar(e) {
+					e.preventDefault();
+
+					$('div#color').css('background-color', '#' + $('input#hexcode').val());
+			
+					return false;
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Color of Hexadecimal Value</h1>
+		
+		<form id="hextocolor">
+			<label for="hexcode">Hex code:</label><br />
+			<input type="text" id="hexcode" />
+			<input type="submit" value="go" /><br />
+		</form>
+		
+		<div id="color"></div>
+	</body>
+</html>
