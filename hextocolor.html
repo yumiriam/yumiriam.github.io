@@ -13,19 +13,41 @@
 				float: left;
 			}
 			
-			form#hextocolor {
+			form {
 				display: block;
 				float: left;
 				width: 150px;
+			}
+			
+			input.text {
+				border: 1px solid #666;
+				border-radius: 4px 4px / 2px 2px; 
 			}
 			
 			input#hexcode {
 				width: 80px;
 				text-align: right;
 			}
+			
+			form#rgbtocolor input.text, form#hsvtocolor input.text {
+				width: 25px;
+			}
 		</style>
 		
 		<script type="text/javascript">
+			function dectohex(d) {
+				v = [
+					"0", "1", "2", "3", "4", 
+					"5", "6", "7", "8", "9", 
+					"a", "b", "c", "d", "e", "f"
+				];
+										
+				r = Math.floor(d / 16);
+				m = d % 16;
+				
+				return v[r] + v[m];
+			}
+		
 			$(document).ready(function () {
 				$("form#hextocolor").bind("submit", function rodar(e) {
 					e.preventDefault();
@@ -34,18 +56,45 @@
 			
 					return false;
 				});
+				
+				$("form#rgbtocolor").bind("submit", function rodar(e) {
+					e.preventDefault();
+
+					val = dectohex($('input#rcode').val()) + 
+						dectohex($('input#gcode').val()) +
+						dectohex($('input#bcode').val());
+						
+					$('div#color').css('background-color', '#' + val);
+					$('input#hexcode').val(val);
+			
+					return false;
+				});
 			});
 		</script>
 	</head>
 	<body>
 		<h1>Color of Hexadecimal Value</h1>
-		
 		<form id="hextocolor">
 			<label for="hexcode">Hex code:</label><br />
-			<input type="text" id="hexcode" />
+			<input type="text" id="hexcode" class="text" />
+			<input type="submit" value="go" /><br />
+		</form>
+
+		<form id="rgbtocolor">
+			<label for="rcode">RGB values:</label><br />
+			<input type="text" id="rcode" class="text" />
+			<input type="text" id="gcode" class="text" />
+			<input type="text" id="bcode" class="text" />
 			<input type="submit" value="go" /><br />
 		</form>
 		
+		<form id="hsvtocolor">
+			<label for="rcode">HSV values:</label><br />
+			<input type="text" id="hcode" class="text" />
+			<input type="text" id="scode" class="text" />
+			<input type="text" id="vcode" class="text" />
+			<input type="submit" value="go" /><br />
+		</form>
 		<div id="color"></div>
 	</body>
 </html>
