@@ -2,7 +2,7 @@
 
 ## Grafos
 
-* [grafo simples](#gsimples)
+* <a id="simples" />[grafo simples](#simples)
 
   Grafo que não tem laços nem arestas paralelas.
 
