@@ -98,5 +98,34 @@
 
   Qualquer orientação de um grafo completo.
   
-  Veja [grafo orientado](#orientado).
+  Ver [grafo orientado](#orientado).
 
+* [subgrafo gerador](#spanningsubgraph)
+
+  Subgrafo F obtido a partir de um grafo G pela remoção de **arestas**.
+  
+  Se S é o conjunto de arestas removidas F é o grafo G \ S. 
+  
+  V(F) = V(G).
+  
+* [hamiltoniano](#hamiltoniano)
+
+  Um *caminho hamiltoniano* ou *ciclo hamiltoniano* é aquele que é gerador de um dado grafo. 
+  
+  O grafo hamiltoniano possui um ciclo hamiltoniano.
+  
+* [k-fator](#kfactor)
+
+  Subgrafo gerador k-regular. 1-fator também é chamado *emparelhamento perfeito*.
+
+* [subgrafo induzido](#inducedsubgraph)
+
+  Subgrafo induzido/gerado F obtido a partir de G pela remoção de **vértices**.
+  
+  Toda aresta de E(G) com ambos os extremos em V(F) também é aresta de E(F).
+
+  Se X é o conjunto de vértices removidos F é o grafo G - X.
+  
+* [grafo ponderado](#ponderado)
+
+  Grafo no qual cada aresta tem um número real denominado *peso* w(e) associado à ela.
