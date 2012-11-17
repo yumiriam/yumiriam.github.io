@@ -8,19 +8,19 @@
 
 * <a id="completo" />[grafo completo](#gcompleto)
 
-  Grafo simples em que todo par de vértices é adjacente. Denotado por K_n.
+  Grafo simples em que todo par de vértices é adjacente. Denotado por K\_n.
 
 * <a id="caminho" />[caminho](#caminho)
 
-  Grafo simples cujos vértices podem ser listados numa sequeência linear, tal que dois vértices são adjacentes se, e só se, são consecutivos na sequência. Denotado por P_n.
+  Grafo simples cujos vértices podem ser listados numa sequeência linear, tal que dois vértices são adjacentes se, e só se, são consecutivos na sequência. Denotado por P\_n.
   
 * <a id="ciclo" />[ciclo](#ciclo)
 
-  Grafo simples com três ou mais vértices, cujos vértices podem ser listados numa sequência cíclica tal que dois vértices são adjacentes se, e só se, são consecutivos na sequência. Denotado por C_n.
+  Grafo simples com três ou mais vértices, cujos vértices podem ser listados numa sequência cíclica tal que dois vértices são adjacentes se, e só se, são consecutivos na sequência. Denotado por C\_n.
 
-  C_1 é um vértice com um laço.
+  C\_1 é um vértice com um laço.
 
-  C_2 é um par de vértices ligados por um par de arestas paralelas.
+  C\_2 é um par de vértices ligados por um par de arestas paralelas.
   
 * <a id="length" />[comprimento](#length) (de um caminho ou de um ciclo)
 
@@ -60,13 +60,13 @@
   
   Se G[X, Y] é simples e todo vértice em X é adjacente a todo vértice em Y, G[X, Y] é *bipartido completo*.
   
-  K_x,y é o grafo bipartido completo em que x = |X| e y = |Y|.
+  K\_x,y é o grafo bipartido completo em que x = |X| e y = |Y|.
   
-  K_1,y ou K_x,1 é chamado *estrela*. 
+  K\_1,y ou K\_x,1 é chamado *estrela*. 
   
 * <a id="grau" />[grau](#grau) (de um vértice)
 
-  Número de arestas incidentes em v, cada laço contado duas vezes. Denotado por d_G(v).
+  Número de arestas incidentes em v, cada laço contado duas vezes. Denotado por d\_G(v).
   
   Grau mínimo de G é o grau do vértice de menor grau de G. Grau máximo é o grau do vértice de maior grau de G.
   
@@ -81,10 +81,14 @@
   Grafo D formado por um conjunto de vértices V e outro de arcos A, além de uma função de incidência que associa cada arco de A com um par **ordenado** de vértices.
   
   Grafos direcionados *estritos*, são aqueles que não possuem laços nem arcos paralelos.
+
+* <a id="orientacao" />[orientação](#orientacao)
+
+  Grafo D resultante da substituição das arestas de um grafo G por arcos correspondentes.
   
 * <a id="orientado" />[grafo orientado](#orientado)
 
-  Orientação de um grafo simples. D é uma *orientação* de G se é obtido a partir de G pela substituição das arestas por arcos correspondentes.
+  [Orientação](#orientacao) de um grafo simples. 
 
 * <a id="odeg" />[ordem](#odeg) (de um grafo)
 
@@ -96,9 +100,7 @@
   
 * <a id="torneio" />[torneio](#torneio)
 
-  Qualquer orientação de um grafo completo.
-  
-  Ver [grafo orientado](#orientado).
+  Qualquer [orientação](#orientacao) de um grafo completo.
 
 ## Isomorfismo
 
@@ -194,7 +196,7 @@
 
   Seja E[X, Y] o conjunto de arestas de G com um extremo em X e o outro em Y.
   
-  Quando Y = V − X, E[X , Y] ́é chamado de corte (*cut*) de X em G e denotado por ∂(X).
+  Quando Y = V − X, E[X, Y] ́é chamado de corte (*cut*) de X em G e denotado por ∂(X).
 
 * <a id="trivialcut" />[corte trivial](#trivialcut)
 
@@ -204,13 +206,13 @@
 
 * <a id="walk" />[passeio](#walk)
 
-  Sequência W = v_0 e_1 v_1 ... e_l v_l cujos elementos são vértices e arestas **não necessariamente** distintos, tal que para todo 1 ≤ i ≤ l, v_i-1 e v_i são extremos de e.
+  Sequência W = v\_0 e\_1 v\_1 ... e\_l v\_l cujos elementos são vértices e arestas **não necessariamente** distintos, tal que para todo 1 ≤ i ≤ l, v\_i-1 e v\_i são extremos de e.
 
-  Se v_0 = x e v_l = y, W conecta x a y e é um *passeio* de x a y.
+  Se v\_0 = x e v\_l = y, W conecta x a y e é um *passeio* de x a y.
 
   Qualquer subsequência com vértice de *início* u e vértice de *término* v é chamada *segmento* de W e denotada por uWv.
 
-  Um passeio é *fechado* (*closed*) se os vértices de início e término cincidem.
+  Um passeio é *fechado* (*closed*) se os vértices de início e término coincidem.
 
 * <a id="trail" />[trilha](#trail)
 
@@ -228,7 +230,7 @@
 
 * <a id="distance" />[distância](#distance)
 
-  Comprimento do menor caminho de u a v em G, denotado por d_G(u, v).
+  Comprimento do menor caminho de u a v em G, denotado por d\_G(u, v).
 
 * <a id="cutedge" />[aresta de corte](#cutedge)
 

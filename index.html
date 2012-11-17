@@ -1,8 +1,29 @@
 <html>
 	<head>
 		<title>Miriam's Page</title>
+		
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		
+		<script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script>
+		<script type="text/javascript" src="scripts/showdown.js"></script>
+		
+		<script type="text/javascript">
+			jQuery.get('menu.html', function(data) {
+			   $("div#menu_esq").html(data);
+			});
+		</script>
 	</head>
 	<body>
-		<h1>Welcome!</h1>
+		<div id="moldura">
+			<div id="menu_esq">
+			</div>
+			<div id="conteudo">
+				<h1>Bem vind@!</h1>
+				<p>Esta &eacute; a minha p&aacute;gina pessoal.</p>
+				<h2>Quem sou eu?</h2>
+				<p>Meu nome &eacute; Miriam Yumi, sou estudante do terceiro ano do curso de Bacharelado em Ci&ecirc;ncia da Computa&ccedil;&atilde;o na Universidade Federal de S&atilde;o Carlos, <em>campus</em> Sorocaba.</p>
+			</div>
+		</div>
 	</body>
 </html>
