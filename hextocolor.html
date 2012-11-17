@@ -35,6 +35,12 @@
 		</style>
 		
 		<script type="text/javascript">
+			jQuery.get('menu.html', function(data) {
+			   $("div#menu_esq").html(data);
+			});
+		</script>
+		
+		<script type="text/javascript">
 			function dectohex(d) {
 				v = [
 					"0", "1", "2", "3", "4", 
@@ -73,28 +79,34 @@
 		</script>
 	</head>
 	<body>
-		<h1>Color of Hexadecimal Value</h1>
-		<form id="hextocolor">
-			<label for="hexcode">Hex code:</label><br />
-			<input type="text" id="hexcode" class="text" />
-			<input type="submit" value="go" /><br />
-		</form>
+		<div id="moldura">
+			<div id="menu_esq">
+			</div>
+			<div id="conteudo">
+				<h1>Color of Hexadecimal Value</h1>
+				<form id="hextocolor">
+					<label for="hexcode">Hex code:</label><br />
+					<input type="text" id="hexcode" class="text" />
+					<input type="submit" value="go" /><br />
+				</form>
 
-		<form id="rgbtocolor">
-			<label for="rcode">RGB values:</label><br />
-			<input type="text" id="rcode" class="text" />
-			<input type="text" id="gcode" class="text" />
-			<input type="text" id="bcode" class="text" />
-			<input type="submit" value="go" /><br />
-		</form>
+				<form id="rgbtocolor">
+					<label for="rcode">RGB values:</label><br />
+					<input type="text" id="rcode" class="text" />
+					<input type="text" id="gcode" class="text" />
+					<input type="text" id="bcode" class="text" />
+					<input type="submit" value="go" /><br />
+				</form>
 		
-		<form id="hsvtocolor">
-			<label for="rcode">HSV values:</label><br />
-			<input type="text" id="hcode" class="text" />
-			<input type="text" id="scode" class="text" />
-			<input type="text" id="vcode" class="text" />
-			<input type="submit" value="go" /><br />
-		</form>
-		<div id="color"></div>
+				<form id="hsvtocolor">
+					<label for="rcode">HSV values:</label><br />
+					<input type="text" id="hcode" class="text" />
+					<input type="text" id="scode" class="text" />
+					<input type="text" id="vcode" class="text" />
+					<input type="submit" value="go" /><br />
+				</form>
+				<div id="color"></div>
+			</div>
+		</div>
 	</body>
 </html>
