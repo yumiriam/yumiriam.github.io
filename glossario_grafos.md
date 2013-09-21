@@ -428,17 +428,17 @@
    
    Complexidade: O(|V| + |E|)
    
-   <h2>Classificação de arestas</h2>
+   **Classificação de arestas**
    
-   Data uma floresta G<sub>pred</sub> construída pela [DFS](#dfs):
+   Dada uma floresta G<sub>pred</sub> construída pela [DFS](#dfs):
 
   + <a id="forest_edge" />[aresta da floresta](#forest_edge)
 
-    Toda aresta em G<sub>pred</sub>.
+     Toda aresta em G<sub>pred</sub>.
 
   + <a id="back_edge" />[aresta de retorno](#back_edge)
 
-    É uma aresta (u, v) onde *v* é **ancestral** de *u* em G<sub>pred</sub>.
+     É uma aresta (u, v) onde *v* é **ancestral** de *u* em G<sub>pred</sub>.
      
   + <a id="forward_edge" />[aresta direta](#forward_edge)
 
@@ -446,7 +446,7 @@
 
   + <a id="cross_edge" />[aresta cruzada](#cross_edge)
 
-    Todas as arestas que não podem ser classificadas como [de retorno](#back_edge) ou [diretas](#forward_edge).
+     Todas as arestas que não podem ser classificadas como [de retorno](#back_edge) ou [diretas](#forward_edge).
 
   Teorema: Em uma DFS de um grafo **não direcionado** G = (V, E) toda aresta é da árvore ou é de retorno.
 
@@ -454,7 +454,7 @@
 
 - <a id="topsort" />[ordenação topológica](#topsort)
 
-  Em um [grafo direcionado acíclico](#dag) G = (V, E), é uma ordem linear dos vértices tal que, para todo arco (u, v) em E, *u* _antecede_ *v* na ordem.
+    Em um [grafo direcionado acíclico](#dag) G = (V, E), é uma ordem linear dos vértices tal que, para todo arco (u, v) em E, *u* _antecede_ *v* na ordem.
   
   Lema: Um grafo direcionado G é acíclico *se e somente se* uma bisca em peofundidade em G não classifica nenhum arco como sendo de retorno.
   
@@ -470,7 +470,7 @@
 
   É o grafo G<sup>T</sup> = (V, E<sup>T</sup>) de um grafo direcionado G = (V, E) onde:
   
-      E<sup>T</sup> = {(u, v) ∊ V x V: (v, u) ∊ E}
+       E<sup>T</sup> = {(u, v) ∊ V x V: (v, u) ∊ E}
   
   o grafo obtido invertendo-se a orientação de seus arcos.
 
@@ -486,12 +486,12 @@
 
       &sum;<sub>e ∊ T</sub> w<sub>e</sub> ≤ &sum;<sub>e ∊ T'</sub> w<sub>e</sub>.
 
-  ### Características:
+  **Características**
 
   + Só tem solução se G é conexo.
   + Resulta em uma árvore - a *Árvore Geradora Mínima* (AGM) - dado que tal subgrafo não conterá ciclos.
 
-  ### Algoritmos:
+  **Algoritmos**
   
   - Algoritmo genérico: estratégia gulosa.
   
@@ -500,11 +500,11 @@
       
       AGM-Generico(G, w)
       
-          A ← 0;
-          enquanto A não forma uma árvore geradora faça
-              encontre aresta segura (u, v);
-              A ← A ∪ {(u, v)};
-          retorne A.
+              A ← 0;
+              enquanto A não forma uma árvore geradora faça
+                  encontre aresta segura (u, v);
+                  A ← A ∪ {(u, v)};
+              retorne A.
 
   Teorema: Seja G = (V, E) um grafo conexo não orientado ponderado nas arestas por uma função w: E → &#x211D;. Seja A um subconjunto de E que está contido em alguma AGM de G, seja ainda ∂(S) um [corte](#cut) de G que respeita A e (u, v) uma [aresta leve](#lightedge) de ∂(S). Então, (u, v) é uma **aresta segura** para A.
   
@@ -534,7 +534,7 @@
 
     &sum;<sub>e ∊ C</sub> d<sub>e</sub> ≤ &sum;<sub>e ∊ C'</sub> d<sub>e</sub>.
 
-  ### Algoritmos
+  **Algoritmos**
   
   - [Dijkstra](#dijkstra)
   
@@ -548,7 +548,7 @@
   
     Para [DAGs](#dag), basta calcular os caminhos mínimos analisando os vértices segundo a ordenação topológica. Funciona mesmo com arestas de peso negativo.
     
-  ### Caminhos mínimos entre todos os pares de vértices
+  **Caminhos mínimos entre todos os pares de vértices**
   
   - [Dijkstra](#dijkstra)
   
@@ -562,7 +562,7 @@
 
   Algoritmo para encontrar [caminhos mínimos](#minpath) a partir de um vértice *r*. Resulta numa [árvore geradora](#spanningtree) com raiz em *r* - árvore de caminhos mínimos para *r*: ACM(r).
   
-  ### Características
+  **Características**
   
   + Funciona para grafos direcionados e não direcionados desde que não haja arestas de peso negativo.
   
@@ -572,7 +572,7 @@
 
   Algoritmo para encontrar [caminhos mínimos](#minpath) a partir de um vértice *r*.
   
-  ### Características
+  **Características**
   
   + Funciona para grafos direcionados não haja ciclos negativos.
   + Detecta a existência de ciclos negativos.
@@ -581,7 +581,7 @@
 
   Algoritmo para encontrar [caminhos mínimos](#minpath) entre todos os pares de vértices de um grafo.
   
-  ## Características
+  **Características**
 
   + Usado quando o grafo é denso
   + Funciona mesmo na presença de arestas de peso negativo, desde que não haja ciclos negativos
