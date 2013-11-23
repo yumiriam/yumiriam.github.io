@@ -13,28 +13,6 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-	<script type="text/javascript">
-		$(document).ready(function () {
-			
-			param = (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1];
-			
-			if (param == "grafos")
-				$("title").html($("title").html() + " - Teoria dos Grafos");
-			else if (param == "md")
-				$("title").html($("title").html() + " - Matem&aacute;tica Discreta");
-
-			jQuery.get('nav.html', function(data) {
-				$('div#nav-bar').html(data);
-			}
-
-			jQuery.get('glossario_'+param+'.md', function(data) {
-			   converter = new Showdown.converter();
-			   html = converter.makeHtml(data);
-			   
-			   $("div.inner").html(html);
-			});
-		});
-	</script>
     <title>Miriam Yumi's Home Page</title>
   </head>
 
@@ -64,6 +42,28 @@
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			
+			param = (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1];
+			
+			if (param == "grafos")
+				$("title").html($("title").html() + " - Teoria dos Grafos");
+			else if (param == "md")
+				$("title").html($("title").html() + " - Matem&aacute;tica Discreta");
+
+			jQuery.get('nav.html', function(data) {
+				$('div#nav-bar').html(data);
+			}
+
+			jQuery.get('glossario_'+param+'.md', function(data) {
+			   converter = new Showdown.converter();
+			   html = converter.makeHtml(data);
+			   
+			   $("div.inner").html(html);
+			});
+		});
 	</script>
   </body>
 </html>
