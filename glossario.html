@@ -55,7 +55,7 @@
 
 			jQuery.get('nav.html', function(data) {
 				$('div#nav-bar').html(data);
-			}
+			});
 
 			jQuery.get('glossario_'+param+'.md', function(data) {
 			   converter = new Showdown.converter();
