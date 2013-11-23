@@ -82,7 +82,7 @@
 
   Grafo em que toda partição de V em dois conjuntos não vazios X e Y, existe uma aresta com um extremo em X e o outro em Y.
 
-  O grafo é *desconexo- se é possível achar uma partição de V em dois conjuntos não vazios X e Y, em que não há arestas com um extremo em X e outro em Y.
+  O grafo é *desconexo* se é possível achar uma partição de V em dois conjuntos não vazios X e Y, em que não há arestas com um extremo em X e outro em Y.
   
 - <a id="disjunto" />[grafos disjuntos](#disjunto)
 
@@ -116,7 +116,7 @@
   
 - <a id="bipartido" />[grafo bipartido](#bipartido)
 
-  Grafo cujo conjunto de vértices V pode ser particionado em dois conjuntos X e Y tais que cada aresta de G tem um extremo em X e o outro em Y. (X, Y) é uma *bipartição- do grafo G[X, Y] e X e Y são suas *partes*.
+  Grafo cujo conjunto de vértices V pode ser particionado em dois conjuntos X e Y tais que cada aresta de G tem um extremo em X e o outro em Y. (X, Y) é uma *bipartição* do grafo G[X, Y] e X e Y são suas *partes*.
   
   Se G[X, Y] é simples e todo vértice em X é adjacente a todo vértice em Y, G[X, Y] é *bipartido completo*.
   
@@ -264,7 +264,7 @@
   
 - <a id="ponderado" />[grafo ponderado](#ponderado)
 
-  Grafo no qual cada aresta tem um número real denominado *peso- w(e) associado à ela.
+  Grafo no qual cada aresta tem um número real denominado [peso](#peso) w(e) associado à ela.
   
 - <a id="peso" />[peso](#peso)
 
@@ -282,7 +282,7 @@
   
 - <a id="decomposicao" />[decomposição](#decomposicao)
 
-  Família de subgrafos aresta-disjuntos de G tais que a união do conjunto de arestas de cada subgrafo da família resulta no conjnto de arestas do grafo original G.
+  Família de subgrafos [aresta-disjuntos](#adisjunto) de G tais que a união do conjunto de arestas de cada subgrafo da família resulta no conjnto de arestas do grafo original G.
 
 - <a id="even" />[grafo par](#even)
 
@@ -294,9 +294,9 @@
 
 - <a id="cobertura" />[cobertura](#cobertura)
 
-  Família de subgrafos **não necessariamente*- aresta-disjuntos de G tais que a união do conjunto de arestas de cada subgrafo da família resulta no conjnto de arestas do grafo original G.
+  Família de subgrafos **não necessariamente** [aresta-disjuntos](#adisjunto) de G tais que a união do conjunto de arestas de cada subgrafo da família resulta no conjunto de arestas do grafo original G.
   
-  É chamada *uniforme- se cobre cada aresta de G o mesmo número de vezes. Se k é o número de vezes, a cobertura é denominada *k-cobertura*.
+  É chamada *uniforme* se cobre cada aresta de G o mesmo número de vezes. Se k é o número de vezes, a cobertura é denominada *k-cobertura*.
 
 - <a id="cut" />[corte](#cut)	
 
@@ -322,7 +322,7 @@
 
   Se v<sub>0</sub> = x e v<sub>l</sub> = y, W conecta x a y e é um *passeio* de x a y.
 
-  Qualquer subsequência com vértice de *início* u e vértice de *término* v é chamada *segmento- de W e denotada por uWv.
+  Qualquer subsequência com vértice de *início* u e vértice de *término* v é chamada *segmento* de W e denotada por uWv.
 
   Um passeio é *fechado* (*closed*) se os vértices de início e término coincidem.
 
@@ -346,7 +346,7 @@
 
 - <a id="cutedge" />[aresta de corte](#cutedge)
 
-  Aresta *e- que quando removida aumenta o número de componentes conexas de G, ou seja, c(G \ e) = c(G) + 1.
+  Aresta *e* que quando removida aumenta o número de componentes conexas de G, ou seja, c(G \ e) = c(G) + 1.
   
   Preposição: Uma aresta e de um grafo G é uma aresta de corte se e somente se e não pertence a um ciclo de G.
 

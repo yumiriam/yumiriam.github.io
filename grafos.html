@@ -3,9 +3,45 @@
 <h2>Definições</h2>
 
 <ul>
+<li><p><a id="graph" /><a href="#graph">grafo</a></p>
+
+<p>Um par ordenado G = (V(G), E(G)), onde V(G) e E(G) são conjuntos disjuntos, V(G) um conjunto de vértices, E(G) um conjunto de arestas juntamente com uma função de incidência ψ<sub>G</sub> que a associa cada aresta de G um par não ordenado de vértices de G.</p>
+
+<p>ψ(e) = {u, v}, se a aresta <em>e</em> <strong>liga</strong> os vértices <em>u</em> e <em>v</em> - <em>u</em> e <em>v</em> são <strong>extremos</strong> de <em>e</em>.</p></li>
+<li><p><a id="incidencia" /><a href="#incidencia">incidência</a></p>
+
+<p>Os extremos de uma aresta <strong>incidem</strong> na aresta e a aresta <strong>incide</strong> em seus extremos.</p></li>
+<li><p><a id="adjacencia" /><a href="#adjacencia">adjacência</a></p>
+
+<p>Dois vértices são <strong>adjacentes</strong> se <a href="#incidencia">incidem</a> numa mesma aresta.</p>
+
+<p>Duas arestas são <strong>adjacentes</strong> se  <a href="#incidencia">incidem</a> num mesmo vértice.</p></li>
+<li><p><a id="vizinhanca" /><a href="#vizinhanca">vizinhança</a></p>
+
+<p>Dois vértices distintos <a href="#adjacencia">adjacentes</a> são chamados de <strong>vizinhos</strong>.</p>
+
+<p>N<sub>G</sub>(v) é o conjunto de vizinhos do vértice <em>v</em>.</p></li>
+<li><p><a id="finito" /><a href="#finito">finito</a></p>
+
+<p>Grafo onde ambos V(G) e E(G) são finitos.</p></li>
+<li><p><a id="ordem" /><a href="#ordem">ordem</a></p>
+
+<p>De um grafo G, é o seu número de vértices. Denotado por: v(G), |V(G)| ou <em>n</em> (simplificado).</p></li>
+<li><p><a id="tamanho" /><a href="#tamanho">tamanho</a></p>
+
+<p>De um grafo G, é o seu número de arestas. Denotado por: e(G), |E(G)| ou <em>m</em> (simplificado).</p></li>
+<li><p><a id="loop" /><a href="#loop">laço</a></p>
+
+<p>Aresta com extremos idênticos.</p></li>
+<li><p><a id="links" /><a href="#links">ligações</a></p>
+
+<p>Aresta com extremos distintos.</p></li>
+<li><p><a id="parallel" /><a href="#parallel">arestas paralelas</a></p>
+
+<p>Duas ou mais <a href="#links">ligações</a> de um mesmo par de vértices.</p></li>
 <li><p><a id="simples" /><a href="#simples">grafo simples</a></p>
 
-<p>Grafo que não tem laços nem arestas paralelas.</p></li>
+<p>Grafo que não tem <a href="#links">laços</a> nem <a href="#parallel">arestas paralelas</a>.</p></li>
 <li><p><a id="completo" /><a href="#gcompleto">grafo completo</a></p>
 
 <p>Grafo simples em que todo par de vértices é adjacente. Denotado por K<sub>n</sub>.</p></li>
@@ -25,7 +61,9 @@
 
 <p>k-caminho/k-ciclo é o caminho/cilco de comprimento k.</p>
 
-<p>3-ciclo também é chamado de triângulo, assim como o 4-ciclo de quadrilátero e assim por diante.</p></li>
+<p>3-ciclo também é chamado de triângulo, assim como o 4-ciclo de quadrilátero e assim por diante.</p>
+
+<p>Teorema: Seja G um grafo tal que <a href="#degree">δ(G)</a> ≥ 2. Então G contém um ciclo.</p></li>
 <li><p><a id="conexo" /><a href="#conexo">grafo conexo</a></p>
 
 <p>Grafo em que toda partição de V em dois conjuntos não vazios X e Y, existe uma aresta com um extremo em X e o outro em Y.</p>
@@ -41,11 +79,20 @@
 <p>Dois grafos que não têm arestas em comum.</p>
 
 <p>Ver <a href="#disjunto">grafos disjuntos</a>.</p></li>
-<li><p><a id="componente" /><a href="#componente">componente conexa</a></p>
+<li><p><a id="union" /><a href="#union">união</a></p>
 
-<p>Cada grafo da união disjunta de um ou mais grafos.</p>
+<p>De dois grafos simples G e H, denotada G ∪ H tem como vétices V(G) ∪ V(H) e arestas E(G) ∪ E (H).</p></li>
+<li><p><a id="componente" /><a href="#componente">componente conexo</a></p>
+
+<p>Cada grafo resultante da união disjunta de um ou mais grafos.</p>
 
 <p>c(G) é o número de componentes conexas de um grafo. </p></li>
+<li><p><a id="intersection" /><a href="#intersection">interseção</a></p>
+
+<p>De dois grafos simples G e H, denotada G ∩  H tem como vétices V(G) ∩ V(H) e arestas E(G) ∩ E (H).</p></li>
+<li><p><a id="null" /><a href="#null">grafo nulo</a></p>
+
+<p>Grafo sem vértices.</p></li>
 <li><p><a id="bipartido" /><a href="#bipartido">grafo bipartido</a></p>
 
 <p>Grafo cujo conjunto de vértices V pode ser particionado em dois conjuntos X e Y tais que cada aresta de G tem um extremo em X e o outro em Y. (X, Y) é uma <em>bipartição- do grafo G[X, Y] e X e Y são suas *partes</em>.</p>
@@ -54,12 +101,16 @@
 
 <p>K<sub>x,y</sub> é o grafo bipartido completo em que x = |X| e y = |Y|.</p>
 
-<p>K<sub>1,y</sub> ou K<sub>x,1</sub> é chamado <em>estrela</em>. </p></li>
+<p>K<sub>1,y</sub> ou K<sub>x,1</sub> é chamado <em>estrela</em>. </p>
+
+<p>Teorema: Um grafo é bipartido se e somente se não tem ciclo ımpar.</p></li>
 <li><p><a id="grau" /><a href="#grau">grau</a> (de um vértice)</p>
 
 <p>Número de arestas incidentes em v, cada laço contado duas vezes. Denotado por d<sub>G(v)</sub>.</p>
 
-<p>Grau mínimo de G é o grau do vértice de menor grau de G. Grau máximo é o grau do vértice de maior grau de G.</p></li>
+<p>Um vértice de grau zero é chamado <strong>vértice isolado</strong>.</p>
+
+<p>Grau <strong>mínimo</strong> de G é o grau do vértice de menor grau de G, denotado por δ(G). Grau <strong>máximo</strong> é o grau do vértice de maior grau de G, denotado por ∆(G).</p></li>
 <li><p><a id="regular" /><a href="#regular">grafo regular</a></p>
 
 <p>Grafo k-regular, onde d(v) = k para todo v em V, para algum valor de k.</p>
@@ -67,7 +118,11 @@
 <p>Grafos 3-regulares são chamados <em>grafos cúbicos</em>.</p></li>
 <li><p><a id="digraph" /><a href="#digraph">grafo direcionado</a></p>
 
-<p>Grafo D formado por um conjunto de vértices V e outro de arcos A, além de uma função de incidência que associa cada arco de A com um par <em>*ordenado</em>- de vértices.</p>
+<p>Grafo D formado por um conjunto de vértices V e outro de arcos A, além de uma função de incidência que associa cada arco de A com um par <strong>ordenado</strong> de vértices.</p>
+
+<p>Se ψ<sub>D</sub>(a) = uv, dizemos que <em>a</em> liga <em>u</em> a <em>v</em>; ou <em>u</em> <strong>domina</strong> <em>v</em>. <em>u</em> é sua <strong>origem</strong> (<em>tail</em>) e <em>v</em> o <strong>destino</strong> (<em>head</em>)</p>
+
+<p>Vértices que dominam <em>v</em> são chamados <strong>vizinhos de entrada</strong>, N<sub>D</sub><sup>-</sup>(v). Vértices dominados por <em>v</em> são chamados <strong>vizinhos de saída</strong>, N<sub>D</sub><sup>+</sup>(v).</p>
 
 <p>Grafos direcionados <em>estritos</em>, são aqueles que não possuem laços nem arcos paralelos.</p></li>
 <li><p><a id="orientacao" /><a href="#orientacao">orientação</a></p>
@@ -120,6 +175,26 @@
 <h2>Subgrafos</h2>
 
 <ul>
+<li><p><a id="remocoes" /><a href="#remocoes">remoções</a></p>
+
+<p>Remoção de uma <strong>aresta</strong> <em>e</em> de um grafo G resulta no grafo denotado G \ e.</p>
+
+<p>Remoção de um <strong>vértice</strong> <em>v</em> de um grafo G resulta no grafo denotado G − v.</p></li>
+<li><p><a id="subgraph" /><a href="#subgraph">subgrafo</a></p>
+
+<p>Um grafo F é subgrafo de G se V(F) ⊆ V(G), E(F) ⊆ E(G) e ψ<sub>F</sub> é a restrição de ψ<sub>G</sub> a E(F).</p>
+
+<p>G contém F e F está contido em G, denotado G ⊇ F e F ⊆ G respectivamente.</p>
+
+<p>F pode ser obtido a partir de operações de <a href="#remocoes">remoção de vértices e arestas</a>.</p></li>
+<li><p><a id="supgraph" /><a href="#supgraph">supergrafo</a></p>
+
+<p>Um grafo H é supergrafo de G se contém G, H ⊇ G.</p>
+
+<p>Todo grafo é supergrafo de si mesmo.</p></li>
+<li><p><a id="proprio" /><a href="#proprio">subgrafo ou supergrafo próprio</a></p>
+
+<p>Subgrafos F e supergrafos H de G, denotados por F ⊂ G e G ⊃ H, respectivamente.</p></li>
 <li><p><a id="spanningsubgraph" /><a href="#spanningsubgraph">subgrafo gerador</a></p>
 
 <p>Subgrafo F obtido a partir de um grafo G pela remoção de <strong>arestas</strong>.</p>
@@ -129,9 +204,15 @@
 <p>V(F) = V(G).</p></li>
 <li><p><a id="hamiltoniano" /><a href="#hamiltoniano">hamiltoniano</a></p>
 
-<p>Um *caminho hamiltoniano - ou *ciclo hamiltoniano - é aquele que é gerador de um dado grafo. </p>
+<p>Um <em>caminho hamiltoniano</em> - ou <em>ciclo hamiltoniano</em> - é aquele que é gerador de um dado grafo. </p>
 
-<p>O grafo hamiltoniano possui um ciclo hamiltoniano.</p></li>
+<p>O grafo hamiltoniano possui um ciclo hamiltoniano.</p>
+
+<p>Teorema de Rédei: Todo <a href="#torneio">torneio</a> tem um caminho hamiltoniano direcionado.</p>
+
+<h3>Problema do Caixeiro Viajante</h3>
+
+<p>Dado um grafo ponderado (G , w ), encontre um ciclo hamiltoniano de G de peso mínimo.</p></li>
 <li><p><a id="kfactor" /><a href="#kfactor">k-fator</a></p>
 
 <p>Subgrafo gerador k-regular. 1-fator também é chamado <em>emparelhamento perfeito</em>.</p></li>
@@ -152,23 +233,35 @@
 <p>De uma aresta é o número real associado à ela.</p></li>
 <li><p><a id="identificacao" /><a href="#identificacao">identificação</a></p>
 
-<p>Operação de substituição de <em>*dois vértices</em>- *x- e *y- por um único vértice incidente em todas as arestas em que *x- e *y- incidiam. O grafo resultante é denotado por G/{x, y}.</p></li>
+<p>Operação de substituição de dois vértices - <em>x</em> e <em>y</em> - por um único vértice incidente em todas as arestas em que <em>x</em> e <em>y</em> incidiam. O grafo resultante é denotado por G/{x, y}.</p></li>
 <li><p><a id="contracao" /><a href="#contracao">contração</a></p>
 
-<p>Operação de remoção de <em>*uma aresta</em>- *e- seguida da <a href="#contracao">contração</a> de seus extremos. O grafo resultante é denotado por G/e.</p></li>
+<p>Operação de remoção de uma aresta <em>e</em> seguida da <a href="#contracao">contração</a> de seus extremos. O grafo resultante é denotado por G/e.</p></li>
 <li><p><a id="decomposicao" /><a href="#decomposicao">decomposição</a></p>
 
 <p>Família de subgrafos aresta-disjuntos de G tais que a união do conjunto de arestas de cada subgrafo da família resulta no conjnto de arestas do grafo original G.</p></li>
+<li><p><a id="even" /><a href="#even">grafo par</a></p>
+
+<p>Grafo em que todo vértice tem <a href="#degree">grau</a> par.</p>
+
+<p>Teorema de Veblen: Um grafo admite uma decomposição em ciclos se e somente se é par.</p>
+
+<p>Teorema: Um grafo é par se e somente se <a href="#cut">|∂(X)|</a> é par para todo subconjunto X de V.</p></li>
 <li><p><a id="cobertura" /><a href="#cobertura">cobertura</a></p>
 
 <p>Família de subgrafos <em>*não necessariamente</em>- aresta-disjuntos de G tais que a união do conjunto de arestas de cada subgrafo da família resulta no conjnto de arestas do grafo original G.</p>
 
 <p>É chamada <em>uniforme- se cobre cada aresta de G o mesmo número de vezes. Se k é o número de vezes, a cobertura é denominada *k-cobertura</em>.</p></li>
-<li><p><a id="cut" /><a href="#cut">corte</a></p>
+<li><p><a id="cut" /><a href="#cut">corte</a>   </p>
 
 <p>Seja E[X, Y] o conjunto de arestas de G com um extremo em X e o outro em Y.</p>
 
-<p>Quando Y = V − X, E[X, Y] ́é chamado de corte (<em>cut</em>) de X em G e denotado por ∂(X).</p></li>
+<p>Quando Y = V − X, E[X, Y] ́é chamado de corte (<em>cut</em>) de X em G e denotado por ∂(X).</p>
+
+<p>Um corte ∂(X) <strong>respeita</strong> um conjunto de arestas A se A ∩ ∂(X) = ⦰.</p></li>
+<li><p><a id="lightedge" /><a href="#lightedge">aresta leve</a></p>
+
+<p>Em um corte ∂(S) se w<sub>uv</sub> := min<sub>(x,y) ∊ ∂(S)</sub>{w<sub>xy</sub>} - (u,v) é a aresta de menor peso no corte ∂(S).</p></li>
 <li><p><a id="trivialcut" /><a href="#trivialcut">corte trivial</a></p>
 
 <p>É dado por todas as arestas incidentes em v e denotado por ∂(v).</p></li>
@@ -181,11 +274,11 @@
 
 <p>Sequência W = v<sub>0</sub> e<sub>1</sub> v<sub>1</sub> ... e<sub>l</sub> v<sub>l</sub> cujos elementos são vértices e arestas <em>*não necessariamente</em>- distintos, tal que para todo 1 ≤ i ≤ l, v<sub>i-1</sub> e v<sub>i</sub> são extremos de e.</p>
 
-<p>Se v<sub>0</sub> = x e v<sub>l</sub> = y, W conecta x a y e é um *passeio- de x a y.</p>
+<p>Se v<sub>0</sub> = x e v<sub>l</sub> = y, W conecta x a y e é um <em>passeio</em> de x a y.</p>
 
-<p>Qualquer subsequência com vértice de *início- u e vértice de *término- v é chamada *segmento- de W e denotada por uWv.</p>
+<p>Qualquer subsequência com vértice de <em>início</em> u e vértice de <em>término</em> v é chamada *segmento- de W e denotada por uWv.</p>
 
-<p>Um passeio é <em>fechado- (</em>closed*) se os vértices de início e término coincidem.</p></li>
+<p>Um passeio é <em>fechado</em> (<em>closed</em>) se os vértices de início e término coincidem.</p></li>
 <li><p><a id="trail" /><a href="#trail">trilha</a></p>
 
 <p><a href="#walk">Passeio</a> em que não existe repetiçào de arestas.</p></li>
@@ -199,10 +292,12 @@
 <p>O grafo é conexo se todo par de vértices está conectado.</p></li>
 <li><p><a id="distance" /><a href="#distance">distância</a></p>
 
-<p>Comprimento do menor caminho de u a v em G, denotado por d<sub>G(u, v)</sub>.</p></li>
+<p>Comprimento do menor <a href="#path">caminho</a> de u a v em G, denotado por d<sub>G(u, v)</sub>.</p></li>
 <li><p><a id="cutedge" /><a href="#cutedge">aresta de corte</a></p>
 
-<p>Aresta *e- que quando removida aumenta o número de componentes conexas de G, ou seja, c(G \ e) = c(G) + 1.</p></li>
+<p>Aresta *e- que quando removida aumenta o número de componentes conexas de G, ou seja, c(G \ e) = c(G) + 1.</p>
+
+<p>Preposição: Uma aresta e de um grafo G é uma aresta de corte se e somente se e não pertence a um ciclo de G.</p></li>
 <li><p><a id="euleriantrail" /><a href="#euleriantrail">trilha euleriana</a></p>
 
 <p><a href="#trail">Trilha</a> que passa por cada aresta do grafo exatamente uma vez.</p></li>
@@ -211,7 +306,9 @@
 <p><a href="#euleriantrail">Trilha Euleriana</a> fechada.</p></li>
 <li><p><a id="eulerian" /><a href="#eulerian">grafo euleriano</a></p>
 
-<p>Grafo conexo e que possui um <a href="#euleriancirc">circuito Euleriano</a>.</p></li>
+<p>Grafo conexo e que possui um <a href="#euleriancirc">circuito Euleriano</a>.</p>
+
+<p>Teorema: Um grafo conexo é euleriano se e somente se é par.</p></li>
 </ul>
 
 <h2>Árvores</h2>
@@ -219,13 +316,24 @@
 <ul>
 <li><p><a id="tree" /><a href="#tree">árvore</a></p>
 
-<p>Grafo T conexo e acíclico.</p></li>
+<p>Grafo T conexo e acíclico.</p>
+
+<p>Preposição: Em uma árvore, quaisquer dois vértices são conectados por precisamente um caminho.</p>
+
+<p>Teorema: Se T é uma árvore, então e(T) = v (T) − 1.</p></li>
 <li><p><a id="forest" /><a href="#forest">floresta</a></p>
 
 <p>Grafo acíclico não necessariamente conexo.</p></li>
+<li><p><a id="leaf" /><a href="#folha">folha</a></p>
+
+<p>Vértice de grau um em uma árvore.</p>
+
+<p>Preposição: Toda árvore nào trivial tem pelo menos duas folhas.</p></li>
 <li><p><a id="spanningtree" /><a href="#spanningtree">árvore geradora</a></p>
 
-<p>Árvore subgrafo gerador de um grafo.</p></li>
+<p>Árvore subgrafo gerador de um grafo.</p>
+
+<p>Teorema: Um grafo é conexo se e somente se tem uma árvore geradora.</p></li>
 <li><p><a id="rootedtree" /><a href="#rootedtree">áarrvore com raiz</a></p>
 
 <p>Árvore com um vértice x chamado de <em>raiz</em>, denotado por T(x).</p></li>
@@ -239,10 +347,10 @@
 <ul>
 <li><p><a id="reach" /><a href="#reach">alcance</a></p>
 
-<p>Um vértice <em>u</em> é <strong>alcançável</strong> a partir de um vértice <em>v</em> de um grafo G se existe um caminho de <em>v</em> para <em>u</em> em G.</p></li>
+<p>Um vértice <em>u</em> é <strong>alcançável</strong> a partir de um vértice <em>v</em> de um grafo G se existe um <a href="#path">caminho</a> de <em>v</em> para <em>u</em> em G.</p></li>
 <li><p><a id="distance" /><a href="#distance">distância</a></p>
 
-<p>Um vértice <em>u</em> está a uma <strong>distância</strong> <em>k</em> de um vértice <em>v</em> se <em>k</em> é o comprimento do menor caminho que começa em <em>v</em> e termina em <em>u</em>.</p>
+<p>Um vértice <em>u</em> está a uma <strong>distância</strong> <em>k</em> de um vértice <em>v</em> se <em>k</em> é o comprimento do menor <a href="#path">caminho</a> que começa em <em>v</em> e termina em <em>u</em>.</p>
 
 <p>Se <em>u</em> <strong>não é alcançável</strong> a partir de <em>v</em>, determina-se que a distância entre eles é <strong>infinita</strong>.</p></li>
 <li><p><a id="bsf" /><a href="#bfs">busca em largura</a></p>
@@ -262,71 +370,148 @@
 
 <p>Complexidade: O(|V| + |E|)</p>
 
-<h2>Classificação de arestas</h2>
+<p><strong>Classificação de arestas</strong></p>
 
-<p>Data uma floresta G<sub>pred</sub> construída pela <a href="#dfs">DFS</a>:</p>
-
-<ul>
-<li><a id="forest_edge" /><a href="#forest_edge">aresta da floresta</a></li>
-</ul>
-
-<p>Toda aresta em G<sub>pred</sub>.</p>
+<p>Dada uma floresta G<sub>pred</sub> construída pela <a href="#dfs">DFS</a>:</p>
 
 <ul>
-<li><a id="back_edge" /><a href="#back_edge">aresta de retorno</a></li>
-</ul>
+<li><p><a id="forest_edge" /><a href="#forest_edge">aresta da floresta</a></p>
 
-<p>É uma aresta (u, v) onde <em>v</em> é <strong>ancestral</strong> de <em>u</em> em G<sub>pred</sub>.</p>
+<p>Toda aresta em G<sub>pred</sub>.</p></li>
+<li><p><a id="back_edge" /><a href="#back_edge">aresta de retorno</a></p>
 
-<ul>
+<p>É uma aresta (u, v) onde <em>v</em> é <strong>ancestral</strong> de <em>u</em> em G<sub>pred</sub>.</p></li>
 <li><p><a id="forward_edge" /><a href="#forward_edge">aresta direta</a></p>
 
 <p>É uma aresta (u, v) que não está em G<sub>pred</sub> onde <em>v</em> é descendente de <em>u</em> em uma árvore contruída pela DFS.</p></li>
-<li><p><a id="cross_edge" /><a href="#cross_edge">aresta cruzada</a></p></li>
+<li><p><a id="cross_edge" /><a href="#cross_edge">aresta cruzada</a></p>
+
+<p>Todas as arestas que não podem ser classificadas como <a href="#back_edge">de retorno</a> ou <a href="#forward_edge">diretas</a>.</p></li>
 </ul>
 
-<p>Todas as arestas que não podem ser classificadas como <a href="#back_edge">de retorno</a> ou <a href="#forward_edge">diretas</a>.</p>
-
-<p><p>Teorema: Em uma DFS de um grafo <strong>não direcionado</strong> G = (V, E) toda aresta é da árvore ou é de retorno.</p></li>
-</ul></p>
-
+<p>Teorema: Em uma DFS de um grafo <strong>não direcionado</strong> G = (V, E) toda aresta é da árvore ou é de retorno.</p></li>
+</ul>
 <h2>Ordenação Topológica</h2>
 
-<ul>
-<li><p><a id="topsort" /><a href="#topsort">ordenação topológica</a></p>
 
-<p>Em um <a href="#dag">grafo direcionado acíclico</a> G = (V, E), é uma ordem linear dos vértices tal que, para todo arco (u, v) em E, <em>u</em> <em>antecede</em> <em>v</em> na ordem.</p>
 
-<p>Lema: Um grafo direcionado G é acíclico <em>se e somente se</em> uma bisca em peofundidade em G não classifica nenhum arco como sendo de retorno.</p>
+08d050a83084b741bdc879872b7dfaf7
 
-<p>Teorema: Rotular os vértices do grafo em ordem decrescente dos valores <a href="#timestamps">f</a> obtidos em uma DFS resulta em uma ordenação topológica correta de um grafo direcionado acíclico G.</p></li>
-</ul>
 
 <h2>Componentes Fortemente Conexas</h2>
 
-<ul>
-<li><p><a id="cfc" /><a href="#cfc">componentes fortemente conexas</a></p>
 
-<p>Uma componente fortemente conexa (CFC) <em>H</em> de um grafo <em>G = (V, E)</em> é um subconjunto de vértices tal que, para todo par de vértices <em>u</em> e <em>v</em> de <em>H</em>, existe um caminho de <em>u</em> para <em>v</em> e vice-versa. <em>H</em> também é <strong>maximal</strong> com relação a inclusão de vértices.</p></li>
-<li><p><a id="transposed" /><a href="#transposed">grafo transposto</a></p>
 
-<p>É o grafo G<sup>T</sup> = (V, E<sup>T</sup>) de um grafo direcionado G = (V, E) onde:</p>
+4eb94ed115f23fcd6b17608edbbdb69a
 
-<p>E<sup>T</sup> = {(u, v) &isin; V x V: (v, u) &isin; E}</p>
-
-<p>o grafo obtido invertendo-se a orientação de seus arcos.</p>
-
-<ul>
-<li>G e G<sup>T</sup> têm as mesmas componentes fortemente conexas.</li>
-</ul></li>
-</ul>
 
 <h2>Árvore Geradora Mínima</h2>
 
+
+
+ef0c497a32bc57ec5ec5629823d5ee66
+
+
+
+<p><strong>Algoritmos</strong></p>
+
 <ul>
-<li><p><a id="agm" /><a href="#agm">árvore geradora mínima</a></p>
+<li><p>Algoritmo genérico: estratégia gulosa.</p>
 
-<p>Problema: Dado um grafo não orientado ponderado G = (V, E), onde w: E &rarr; &#x211D;<sup>+</sup> define os custos das arestas, encontrar um subgrafo gerador conexo T de G tal que, para todo subgrafo gerador conexo T'de G</p>
+<p><strong>Invariante</strong>: Antes de cada iteração A é um subconjunto de arestas de uma AGM.
+A cada iteração A ∪ {(u, v)}, (u, v) é chamada aresta <strong>segura</strong>.</p>
 
-<p>&sum;<sub>e &isin; T</sub> w<sub>e</sub> &le; &sum;<sub>e &isin; T'</sub> w<sub>e</sub>.</p></li>
+<p>AGM-Generico(G, w)</p>
+
+<pre><code>  A ← 0;
+  enquanto A não forma uma árvore geradora faça
+      encontre aresta segura (u, v);
+      A ← A ∪ {(u, v)};
+  retorne A.
+</code></pre></li>
+</ul>
+
+<p>Teorema: Seja G = (V, E) um grafo conexo não orientado ponderado nas arestas por uma função w: E → &#x211D;. Seja A um subconjunto de E que está contido em alguma AGM de G, seja ainda ∂(S) um <a href="#cut">corte</a> de G que respeita A e (u, v) uma <a href="#lightedge">aresta leve</a> de ∂(S). Então, (u, v) é uma <strong>aresta segura</strong> para A.</p>
+
+<p><a id="corollary23_2" />Corolário: Seja G = (V, E) um grafo conexo não orientado ponderado nas arestas por uma função w: E → &#x211D;<sup>+</sup>. Seja A um subconjunto de E que está contido em alguma AGM de G, e seja C = (V<sub>C</sub>, E<sub>C</sub>) uma componente conexa (árvore) da floresta G<sub>A</sub> = (V, A). Se (u, v) uma <a href="#lightedge">aresta leve</a> de ∂(C), então (u, v) é <strong>segura</strong> para A.</p>
+
+<p>Os algoritmos de <a href="#prim">Prim</a> e de <a href="#kruskal">Kruskal</a> especializam o algoritmo genérico usando o Colorário.</p></li>
+<li><p><a id="prim" /><a href="#prim">Prim</a></p>
+
+<p>Dado o <a href="#corollary23_2">colorário</a>.</p>
+
+<p>A é sempre uma <a href="#tree">árvore</a>. A <strong>aresta segura</strong> adicionada a A é sempre uma <a href="#lightedge">aresta leve</a> do corte ∂(C), onde C é o conjunto de vértices que sÃo extremidades de arestas em A.</p></li>
+<li><p><a id="kruskal" /><a href="#kruskal">Kruskal</a></p>
+
+<p>Dado o <a href="#corollary23_2">colorário</a>.</p>
+
+<p>A é sempre uma <a href="#forest">floresta</a>. A <strong>aresta segura</strong> adicionada a A é sempre uma aresta de menor peso dentre todas as arestas ligando dois vértices de componentes distintas de G<sub>A</sub>.</p></li>
+</ul>
+<h2>Caminhos Mínimos</h2>
+
+
+
+1c7626fbafbfad7c62bf3f895ea4f494
+
+
+
+<p>Grafos direcionados ou não direcionados sem arestas de peso negativo.</p>
+
+<ul>
+<li><a href="#bellman_ford">Bellman-Ford</a></li>
+</ul>
+
+<p>Grafos direcionados com arestas de peso negativo e sem ciclos negativos.</p>
+
+<ul>
+<li><a href="#topsort">Ordenação topológica</a></li>
+</ul>
+
+<p>Para <a href="#dag">DAGs</a>, basta calcular os caminhos mínimos analisando os vértices segundo a ordenação topológica. Funciona mesmo com arestas de peso negativo.</p>
+
+<p><strong>Caminhos mínimos entre todos os pares de vértices</strong></p>
+
+<ul>
+<li><a href="#dijkstra">Dijkstra</a></li>
+</ul>
+
+<p>Entre todos os vértices quando o grafo é esparso.</p>
+
+<ul>
+<li><a href="#floyd_warshall">Floyd-Warshall</a></li>
+</ul>
+
+<p>Quando o grafo é denso.</p></li>
+<li><p><a id="dijkstra" /><a href="#dijkstra">Dijkstra</a></p>
+
+<p>Algoritmo para encontrar <a href="#minpath">caminhos mínimos</a> a partir de um vértice <em>r</em>. Resulta numa <a href="#spanningtree">árvore geradora</a> com raiz em <em>r</em> - árvore de caminhos mínimos para <em>r</em>: ACM(r).</p>
+
+<p><strong>Características</strong></p>
+
+<ul>
+<li>Funciona para grafos direcionados e não direcionados desde que não haja arestas de peso negativo.</li>
+</ul>
+
+<p>Ver <a href="#prim">Algoritmo de Prim</a>.</p></li>
+<li><p><a id="bellman_ford" /><a href="#bellman_ford">Bellman-Ford</a></p>
+
+<p>Algoritmo para encontrar <a href="#minpath">caminhos mínimos</a> a partir de um vértice <em>r</em>.</p>
+
+<p><strong>Características</strong></p>
+
+<ul>
+<li>Funciona para grafos direcionados não haja ciclos negativos.</li>
+<li>Detecta a existência de ciclos negativos.</li>
+</ul></li>
+<li><p><a id="floyd_warshall" /><a href="#floyd_warshall">Floyd-Warshall</a></p>
+
+<p>Algoritmo para encontrar <a href="#minpath">caminhos mínimos</a> entre todos os pares de vértices de um grafo.</p>
+
+<p><strong>Características</strong></p>
+
+<ul>
+<li>Usado quando o grafo é denso</li>
+<li>Funciona mesmo na presença de arestas de peso negativo, desde que não haja ciclos negativos</li>
+<li>É possível detectar a existência de ciclo negativo analisando a matriz resultado do algoritmo.</li>
+</ul></li>
 </ul>

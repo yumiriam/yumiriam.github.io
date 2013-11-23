@@ -1,54 +1,69 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Miriam's Page - Gloss&aacute;rio</title>
-		
-		<link type="text/css" rel="stylesheet" href="css/style.css" />
-		
-		<script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
-		<script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script>
-		<script type="text/javascript" src="scripts/showdown.js"></script>
-		
-		<script type="text/javascript">
-			$(document).ready(function () {
-				
-				param = (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1];
-				
-				if (param == "grafos")
-					$("title").html($("title").html() + " - Teoria dos Grafos");
-				else if (param == "md")
-					$("title").html($("title").html() + " - Matem&aacute;tica Discreta");
-				jQuery.get('menu.html', function(data) {
-				   $("div#menu_esq").html(data);
-				});
-				jQuery.get('glossario_'+param+'.md', function(data) {
-				   converter = new Showdown.converter();
-				   html = converter.makeHtml(data);
-				   
-				   $("div#conteudo").html(html);
-				});
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" media="screen" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			
+			param = (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1];
+			
+			if (param == "grafos")
+				$("title").html($("title").html() + " - Teoria dos Grafos");
+			else if (param == "md")
+				$("title").html($("title").html() + " - Matem&aacute;tica Discreta");
+
+			jQuery.get('nav.html', function(data) {
+				$('div#nav-bar').html(data);
+			}
+
+			jQuery.get('glossario_'+param+'.md', function(data) {
+			   converter = new Showdown.converter();
+			   html = converter.makeHtml(data);
+			   
+			   $("div.inner").html(html);
 			});
-		</script>
-		
-		<script type="text/javascript">
+		});
+	</script>
+    <title>Miriam Yumi's Home Page</title>
+  </head>
 
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-36592406-1']);
-		  _gaq.push(['_trackPageview']);
+  <body>
+    <div class="container">
+	  <div id="nav-bar">
+	  
+	  </div>
+      
+      <div class="inner">
 
-		  (function() {
+      </div>
+    </div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="scripts/showdown.js"></script>
+	
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36592406-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
 			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-
-		</script>
-	</head>
-	<body>
-		<div id="moldura">
-			<div id="menu_esq">
-			</div>
-			<div id="conteudo">
-			</div>
-		</div>
-	</body>
+		})();
+	</script>
+  </body>
 </html>
