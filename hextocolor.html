@@ -1,114 +1,114 @@
 <html>
-	<head>
-		<title>Miriam's Page - Hexadecimal to Color</title>
-		
-		<link type="text/css" rel="stylesheet" href="css/style.css" />
-		
-		<script type="text/javascript" src="scripts/jquery-1.8.0.min.js"></script>
-		<script type="text/javascript" src="scripts/jquery-ui-1.8.23.custom.min.js"></script>
-		
-		<style type="text/css">
-			div#color {
-				border: 1px solid #666; 
-				width: 40px; 
-				height: 40px;
-				float: left;
-			}
-			
-			form {
-				display: block;
-				float: left;
-				width: 150px;
-			}
-			
-			input.text {
-				border: 1px solid #666;
-				border-radius: 4px 4px / 2px 2px; 
-			}
-			
-			input#hexcode {
-				width: 80px;
-				text-align: right;
-			}
-			
-			form#rgbtocolor input.text, form#hsvtocolor input.text {
-				width: 25px;
-			}
-		</style>
-		
-		<script type="text/javascript">
-			jQuery.get('menu.html', function(data) {
-			   $("div#menu_esq").html(data);
-			});
-		</script>
-		
-		<script type="text/javascript">
-			function dectohex(d) {
-				v = [
-					"0", "1", "2", "3", "4", 
-					"5", "6", "7", "8", "9", 
-					"a", "b", "c", "d", "e", "f"
-				];
-										
-				r = Math.floor(d / 16);
-				m = d % 16;
-				
-				return v[r] + v[m];
-			}
-		
-			$(document).ready(function () {
-				$("form#hextocolor").bind("submit", function rodar(e) {
-					e.preventDefault();
+    <head>
+        <title>Miriam's Page - Hexadecimal to Color</title>
+        
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+       
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        
+        <style type="text/css">
+            div#color {
+                border: 1px solid #666; 
+                width: 40px; 
+                height: 40px;
+                float: left;
+            }
+            
+            form {
+                display: block;
+                float: left;
+                width: 150px;
+            }
+            
+            input.text {
+                border: 1px solid #666;
+                border-radius: 4px 4px / 2px 2px; 
+            }
+            
+            input#hexcode {
+                width: 80px;
+                text-align: right;
+            }
+            
+            form#rgbtocolor input.text, form#hsvtocolor input.text {
+                width: 25px;
+            }
+        </style>
+        
+        <script type="text/javascript">
+            jQuery.get('menu.html', function(data) {
+               $("div#menu_esq").html(data);
+            });
+        </script>
+        
+        <script type="text/javascript">
+            function dectohex(d) {
+                v = [
+                    "0", "1", "2", "3", "4", 
+                    "5", "6", "7", "8", "9", 
+                    "a", "b", "c", "d", "e", "f"
+                ];
+                                        
+                r = Math.floor(d / 16);
+                m = d % 16;
+                
+                return v[r] + v[m];
+            }
+        
+            $(document).ready(function () {
+                $("form#hextocolor").bind("submit", function rodar(e) {
+                    e.preventDefault();
 
-					$('div#color').css('background-color', '#' + $('input#hexcode').val());
-			
-					return false;
-				});
-				
-				$("form#rgbtocolor").bind("submit", function rodar(e) {
-					e.preventDefault();
+                    $('div#color').css('background-color', '#' + $('input#hexcode').val());
+            
+                    return false;
+                });
+                
+                $("form#rgbtocolor").bind("submit", function rodar(e) {
+                    e.preventDefault();
 
-					val = dectohex($('input#rcode').val()) + 
-						dectohex($('input#gcode').val()) +
-						dectohex($('input#bcode').val());
-						
-					$('div#color').css('background-color', '#' + val);
-					$('input#hexcode').val(val);
-			
-					return false;
-				});
-			});
-		</script>
-	</head>
-	<body>
-		<div id="moldura">
-			<div id="menu_esq">
-			</div>
-			<div id="conteudo">
-				<h1>Color of Hexadecimal Value</h1>
-				<form id="hextocolor">
-					<label for="hexcode">Hex code:</label><br />
-					<input type="text" id="hexcode" class="text" />
-					<input type="submit" value="go" /><br />
-				</form>
+                    val = dectohex($('input#rcode').val()) + 
+                        dectohex($('input#gcode').val()) +
+                        dectohex($('input#bcode').val());
+                        
+                    $('div#color').css('background-color', '#' + val);
+                    $('input#hexcode').val(val);
+            
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="moldura">
+            <div id="menu_esq">
+            </div>
+            <div id="conteudo">
+                <h1>Color of Hexadecimal Value</h1>
+                <form id="hextocolor">
+                    <label for="hexcode">Hex code:</label><br />
+                    <input type="text" id="hexcode" class="text" />
+                    <input type="submit" value="go" /><br />
+                </form>
 
-				<form id="rgbtocolor">
-					<label for="rcode">RGB values:</label><br />
-					<input type="text" id="rcode" class="text" />
-					<input type="text" id="gcode" class="text" />
-					<input type="text" id="bcode" class="text" />
-					<input type="submit" value="go" /><br />
-				</form>
-		
-				<form id="hsvtocolor">
-					<label for="rcode">HSV values:</label><br />
-					<input type="text" id="hcode" class="text" />
-					<input type="text" id="scode" class="text" />
-					<input type="text" id="vcode" class="text" />
-					<input type="submit" value="go" /><br />
-				</form>
-				<div id="color"></div>
-			</div>
-		</div>
-	</body>
+                <form id="rgbtocolor">
+                    <label for="rcode">RGB values:</label><br />
+                    <input type="text" id="rcode" class="text" />
+                    <input type="text" id="gcode" class="text" />
+                    <input type="text" id="bcode" class="text" />
+                    <input type="submit" value="go" /><br />
+                </form>
+        
+                <form id="hsvtocolor">
+                    <label for="rcode">HSV values:</label><br />
+                    <input type="text" id="hcode" class="text" />
+                    <input type="text" id="scode" class="text" />
+                    <input type="text" id="vcode" class="text" />
+                    <input type="submit" value="go" /><br />
+                </form>
+                <div id="color"></div>
+            </div>
+        </div>
+    </body>
 </html>

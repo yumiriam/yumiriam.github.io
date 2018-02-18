@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" media="screen" />
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"
+        media="screen" />-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,52 +22,56 @@
 
   <body>
     <div class="container">
-	  <div id="nav-bar">
-	  
-	  </div>
+      <div id="nav-bar">
+      
+      </div>
       
       <div class="inner">
 
       </div>
     </div>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="scripts/showdown.js"></script>
-	
-	<script>
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-36592406-1']);
-		_gaq.push(['_trackPageview']);
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
 
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			
-			param = (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1];
-			
-			if (param == "grafos")
-				$("title").html($("title").html() + " - Teoria dos Grafos");
-			else if (param == "md")
-				$("title").html($("title").html() + " - Matem&aacute;tica Discreta");
+    <script type="text/javascript" src="scripts/showdown.js"></script>
+    
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36592406-1']);
+        _gaq.push(['_trackPageview']);
 
-			jQuery.get('nav.html', function(data) {
-				$('div#nav-bar').html(data);
-			});
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            param = (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1];
+            
+            if (param == "grafos")
+                $("title").html($("title").html() + " - Teoria dos Grafos");
+            else if (param == "md")
+                $("title").html($("title").html() + " - Matem&aacute;tica Discreta");
 
-			jQuery.get('glossario_'+param+'.md', function(data) {
-			   converter = new Showdown.converter();
-			   html = converter.makeHtml(data);
-			   
-			   $("div.inner").html(html);
-			});
-		});
-	</script>
+            jQuery.get('nav.html', function(data) {
+                $('div#nav-bar').html(data);
+            });
+
+            jQuery.get('glossario_'+param+'.md', function(data) {
+               converter = new Showdown.converter();
+               html = converter.makeHtml(data);
+               
+               $("div.inner").html(html);
+            });
+        });
+    </script>
   </body>
 </html>

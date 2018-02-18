@@ -1,2 +1,5 @@
-# Ignore backup files
+# backup files
 *~
+
+# test files
+*_test.html
