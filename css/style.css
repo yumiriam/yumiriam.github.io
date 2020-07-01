@@ -1,0 +1,72 @@
+body {
+    font-family: "Ubuntu Mono", Courier-New, monospace;
+    font-weight: 400;
+}
+
+#aside-yumiriam {
+    height: 100vh;
+}
+
+.img-autora {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.img-autora {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#nome {
+    color: #404040;
+    font-family: "Annie Use Your Telescope";
+}
+
+.cargo {
+    font-size: 0.95rem;
+    text-transform: lowercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-family: "Ubuntu Mono", Courier-New, monospace;
+  font-weight: 400;
+  margin: 0 0 0 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.nav-item {
+    text-transform: lowercase;
+}
+
+.a-nav {
+    color: #737373;
+}
+
+.a-nav.active {
+    text-decoration: underline;
+}
+
+section {
+    margin: 30px 15px;
+}
+
+#main-yumiriam {
+    height: 100vh;
+}
+
+#bemvinde {
+    position: relative;
+    font-size: 1.3rem;
+}

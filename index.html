@@ -1,66 +1,262 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono">
     <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
           crossorigin="anonymous">
-    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"
-        media="screen" />-->
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <title>Miriam Yumi's Home Page</title>
-  </head>
+    <!-- Main style  -->
+    <link rel="stylesheet" href="css/style.css">
 
-  <body>
+    <title>Miriam Yumi</title>
+    </head>
+
+    <body>
+
     <div class="container">
-      <div id="nav-bar">
-      
-      </div>
-      
-      <div class="inner">
+        <div class="row">
 
-        <header>
-            <h1>Seja bem vinda(o) &agrave; minha p&aacute;gina pessoal!</h1>
-        </header>
+        <div id="aside-yumiriam" class="col-sm-3">
+            <nav id="navbar-yumiriam" class="navbar flex-sm-column">
+            <div class="navbar-brand text-center">
+                <div class="img-autora" style="background-image: url(images/about.jpg);"></div>
+                <h1><a id="nome" href="index.html">Miriam Yumi</a></h1>
+            </div>
+            <nav class="nav flex-column nav-item">
+                <a class="nav-link a-nav" href="#item-1">Principal</a>
+                <a class="nav-link a-nav" href="#item-3">Forma&ccedil;&atilde;o</a>
+                <a class="nav-link a-nav" href="#item-4">Interesses</a>
+                <a class="nav-link a-nav" href="#item-5">Experi&ecirc;ncia</a>
+                <a class="nav-link a-nav" href="#item-6">Contato</a>
+            </nav>
+            </nav>
+        </div>
 
-      </div>
+        <div class="col-sm-9">
+        <div id="main-yumiriam" data-spy="scroll" data-target="#navbar-yumiriam" data-offset="0">
+            <section id="item-1">
+                <div class="jumbotron">
+                  <h1 class="display-4">Bem vinde!</h1>
+                  <p class="lead"> Oi, eu sou a Miriam e esse é o meu site pessoal.</p>
+                  <hr class="my-4">
+                  <p></p>
+
+                  <div>
+                  <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <a class="nav-item nav-link active" id="nav-gloss-tab"
+                          data-toggle="tab" href="#nav-gloss" role="tab"
+                          aria-controls="nav-gloss"
+                          aria-selected="true">Gloss&aacute;rios <ion-icon
+                              name="library-outline"></ion-icon></a>
+                      <a class="nav-item nav-link" id="nav-projetos-tab"
+                          data-toggle="tab" href="#nav-projetos" role="tab"
+                          aria-controls="nav-projetos"
+                          aria-selected="false">Projetos <ion-icon
+                              name="logo-github"></ion-icon></a>
+                      <a class="nav-item nav-link" id="nav-textos-tab"
+                          data-toggle="tab" href="#nav-textos" role="tab"
+                          aria-controls="nav-textos"
+                          aria-selected="false">Medium <ion-icon
+                              name="chatbox-outline"></ion-icon></a>
+                    </div>
+                  </nav>
+                  <div class="tab-content bg-light p-3" id="nav-tab-content">
+                    <div class="tab-pane fade show active" id="nav-gloss" role="tabpanel" aria-labelledby="nav-gloss-tab">
+                    <p>Durante a gradua&ccedil;&atilde;o, criei dois documentos com os
+                        termos mais recorrentes nas disciplinas de
+                        Matem&aacute;tica Discreta e Teoria dos Grafos.</p>
+                    <p>Eles
+                        foram muito &uacute;teis na &eacute;poca, então
+                        resolvi compartilhar:</p>
+                        <a href="https://github.com/yumiriam/yumiriam.github.io/blob/master/glossario_md.md" class="btn btn-primary" target="_blank">Matem&aacute;tica Discreta</a>
+                        <a href="https://github.com/yumiriam/yumiriam.github.io/blob/master/glossario_grafos.md" class="btn btn-primary" target="_blank">Grafos</a>
+                    </div>
+                    <div class="tab-pane fade" id="nav-projetos" role="tabpanel" aria-labelledby="nav-projetos-tab">
+                    <p>Por falar em gradua&ccedil;&atilde;o, no meu <a
+                        href="https://github.com/yumiriam"
+                        target="_blank">GitHub</a> d&aacute; pra
+                      encontrar alguns projetos que desenvolvi com ajuda dos
+                      colegas de curso.</p>
+                    </div>
+                    <div class="tab-pane fade" id="nav-textos" role="tabpanel" aria-labelledby="nav-textos-tab">
+                      <p class="card-text">Meu medium ainda n&atilde;o tem
+                      nada mas como sonhar &eacute; de gra&ccedil;a, vou
+                      deixar o link <a href="https://medium.com/@yumiriam"
+                          target="_blank">aqui</a>
+                      como forma de me pressionar a escrever
+                      tamb&eacute;m.</p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </section>
+
+            <section id="item-2">
+            </section>
+
+            <section id="item-3">
+            <h4>Forma&ccedil;&atilde;o</h4>
+
+            <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="heading-1">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse"
+                      data-target="#collapse-1" aria-expanded="true"
+                      aria-controls="collapse-1">
+                    Bacharela em Ci&ecirc;ncia da Computa&ccedil;&atilde;o
+                  </button>
+                </h5>
+              </div>
+              <div id="collapse-1" class="collapse show"
+                  aria-labelledby="heading-1" data-parent="#accordion">
+                <div class="card-body">
+                <p>Em 2013, me formei no curso de Bacharelado em Ci&ecirc;ncia da
+                Computa&ccedil;&atilde;o na UFSCar de Sorocaba.</p>
+                <p>Durante a gradua&ccedil;&atilde;o, participei de dois projetos
+                de inicia&ccedil;&atilde;o cient&iacute;fica na &aacute;rea de
+                Aprendizado de M&aacute;quina (2011-2012) e fui monitora da disciplina de
+                Matem&aacute;tica Discreta e Teoria dos Grafos (2012).</p>
+                <p>Tamb&eacute;m fui membro ativo no Centro Acad&ecirc;mico
+                (CACCS/2012) e goleira do time de futsal do campus (2011).</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="heading-2">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed"
+                      data-toggle="collapse" data-target="#collapse-2"
+                      aria-expanded="false" aria-controls="collapse-2">
+                    T&eacute;cnica em Inform&aacute;tica e Web Design
+                  </button>
+                </h5>
+              </div>
+              <div id="collapse-2" class="collapse" aria-labelledby="heading-2" data-parent="#accordion">
+                <div class="card-body">
+                    <p>Em agosto de 2006, iniciei o curso técnico em
+                    inform&aacute;tica na Escola Técnica Estadual (ETec)
+                    Fernando Prestes, em Sorocaba.</p>
+                    <p>No ano seguinte, ao me formar, iniciei o curso
+                    técnico em Web Design que pude concluir em menor tempo por
+                    já ter cursado disciplinas que estavam na grade dos dois
+                    cursos.</p>
+                    <p>Os dois cursos eram focados em
+                    programa&ccedil;&atilde;o e me deram uma boa base, tanto
+                    pr&aacute;tica quanto te&oacute;rica, para seguir na &aacute;rea
+                    da Computa&ccedil;&atilde;o.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            </section>
+
+            <section id="item-4">
+            <h4>Interesses</h4>
+            <!--
+                <div>
+                <i class="devicon-c-plain"></i>
+                <div></div>
+                </div>
+                <div>
+                <i class="devicon-python-plain"></i>
+                </div>
+                <div>
+                <i class="devicon-linux-plain"></i>
+                </div>
+            -->
+            <div class="alert alert-warning" role="alert">
+                <ion-icon name="warning-outline"></ion-icon> Em constru&ccedil;&atilde;o.
+            </div>
+            </section>
+
+            <section id="item-5">
+            <h4>Experi&ecirc;ncia</h4>
+            <p>Trabalho na &aacute;rea da Computa&ccedil;&atilde;o h&aacute;
+            <span id="anos-exp">X</span> anos, durante os quais j&aacute;
+            atuei como:</p>
+            <ul>
+                <li>Desenvolvedora de Software Embarcado (2015-Hoje)</li>
+                <li>Analista de Sistemas (2013-2015)</li>
+                <li>Desenvolvedora de Software Android (2013-2013)</li>
+            </ul>
+            </section>
+
+            <section id="item-6">
+            <h4>Contato</h4>
+            <p>Entre em contato comigo pelas redes:</p>
+            <ul>
+                <li>
+                    <a href="http://twitter.com/yumiriam" target="_blank">
+                        <i class="devicon-twitter-plain"></i>
+                        twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.linkedin.com/pub/miriam-yumi/25/887/971" target="_blank">
+                        <i class="devicon-linkedin-plain"></i>
+                        linkedin
+                    </a>
+                </li>
+            </ul>
+
+            </section>
+        </div>
+        </div>
+
+        </div>
     </div>
-    <div class="fixed-bottom container-fluid">
-       Rodap&eacute;
-    </div>
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-              integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-              crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-              integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-              crossorigin="anonymous"></script>
-      <script>
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-36592406-1']);
-          _gaq.push(['_trackPageview']);
 
-          (function() {
-              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-      </script>
-      <script type="text/javascript">
-          $(document).ready(function () {
-              jQuery.get('nav.html', function(data) {
-                  $('div#nav-bar').html(data);
-              });
-          });
-      </script>
-  </body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous">
+    </script>
+    <!-- Analytics -->
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36592406-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- More icons -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!-- Custom -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('span#anos-exp').text((new Date()).getFullYear()-2013);
+        });
+    </script>
+
+    </body>
 </html>
