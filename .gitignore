@@ -3,3 +3,6 @@
 
 # test files
 *_test.html
+
+# my virtual env
+.venv
