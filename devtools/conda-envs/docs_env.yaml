@@ -10,5 +10,5 @@ dependencies:
   - python=3.7
   - sphinx
   - ablog
-  - pydata_sphinx_theme
-  - sphinx_panels
+  - pydata-sphinx-theme
+  - sphinx-panels
