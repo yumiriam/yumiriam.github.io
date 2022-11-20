@@ -117,7 +117,7 @@ Teoria dos Números
 .. _divisibilidade:
 
 divisibilidade
----------
+--------------
 
 Para todo número natural **n** e **d** (n ∈ N, d ∈ N*), existem e são únicos
 os números **q** e **r** ∈ N tais que::
