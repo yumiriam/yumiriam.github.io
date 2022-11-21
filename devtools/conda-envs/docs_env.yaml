@@ -12,3 +12,4 @@ dependencies:
   - ablog
   - pydata-sphinx-theme
   - sphinx-panels
+  - sphinx-icon
