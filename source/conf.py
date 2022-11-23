@@ -59,6 +59,9 @@ html_theme_options = {
             'name': "Mastodon",
             'url': "https://indie.social/@yumiriam",
             'icon': "fa-brands fa-mastodon",
+            'attributes': {
+               "rel" : "me",
+            }
         },
     ],
 }
